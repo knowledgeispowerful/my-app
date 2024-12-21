@@ -1,0 +1,52 @@
+mat-card {
+  background-color: #353535;
+  max-width: 50vmax;
+  margin: 0 auto;
+}
+
+mat-card-header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.ingredient > img {
+  max-height: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.ingredient > p {
+  padding: 0;
+  margin: 0;
+  font-size: smaller;
+}
+
+.quality {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.normal {
+  background-color: #808080;
+}
+
+.good {
+  background-color: #9a3d0e;
+}
+
+.verygood {
+  background-color: #638e8e;
+}
+
+.special {
+  background-color: #daa520;
+}
