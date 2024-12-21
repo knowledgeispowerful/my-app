@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "my-app": {
+=======
+    "cms": {
+>>>>>>> ff89c4e (Initial commit)
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,6 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
+<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/my-app",
@@ -34,12 +39,28 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
 
             ]
+=======
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cms",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": []
+>>>>>>> ff89c4e (Initial commit)
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
+<<<<<<< HEAD
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
                 },
@@ -47,14 +68,38 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kB",
                   "maximumError": "4kB"
+=======
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+>>>>>>> ff89c4e (Initial commit)
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
+<<<<<<< HEAD
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+=======
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+>>>>>>> ff89c4e (Initial commit)
             }
           },
           "defaultConfiguration": "production"
@@ -63,20 +108,35 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "my-app:build:production"
             },
             "development": {
               "buildTarget": "my-app:build:development"
+=======
+              "browserTarget": "cms:build:production"
+            },
+            "development": {
+              "browserTarget": "cms:build:development"
+>>>>>>> ff89c4e (Initial commit)
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
+<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:extract-i18n"
+=======
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cms:build"
+          }
+>>>>>>> ff89c4e (Initial commit)
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+<<<<<<< HEAD
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -95,6 +155,15 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+=======
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+>>>>>>> ff89c4e (Initial commit)
           }
         }
       }

@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
+=======
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+>>>>>>> ff89c4e (Initial commit)
